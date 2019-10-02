@@ -5,16 +5,16 @@ public class Main {
         Customer consumer1 = new Customer("Jane", 45.25);
         Customer consumer2 = new Customer("Bob", 33.14);
 
-        VendingMachine vendor1 = new VendingMachine("Food");
-        VendingMachine vendor2 = new VendingMachine("Drink");
-        VendingMachine vendor3 = new VendingMachine("Office");
+        VendingMachines vendor1 = new VendingMachines("Food");
+        VendingMachines vendor2 = new VendingMachines("Drink");
+        VendingMachines vendor3 = new VendingMachines("Office");
 
-        Snack snack1 = new Snack(vendor1.getId(), "Chips", 1.75, 36);
-        Snack snack2 = new Snack(vendor1.getId(), "Chocolate Bar", 1.00, 36);
-        Snack snack3 = new Snack(vendor1.getId(), "Pretzel", 2.00, 30);
+        Snack snack1 = new Snack("Chips", 36, 1.75, vendor1.getId());
+        Snack snack2 = new Snack("Chocolate Bar", 36, 1.00, vendor1.getId());
+        Snack snack3 = new Snack("Pretzel", 30, 2.00, vendor1.getId());
 
-        Snack snack4 = new Snack(vendor2.getId(), "Soda", 2.50, 24);
-        Snack snack5 = new Snack(vendor2.getId(), "Water", 2.75, 20);
+        Snack snack4 = new Snack("Soda", 24, 2.50, vendor2.getId());
+        Snack snack5 = new Snack("Water", 20, 2.75, vendor2.getId());
 
         // Question 1
         // Customer 1 buys 3 of snack 4. 
@@ -54,7 +54,7 @@ public class Main {
         // Print Customer 1 Cash on Hand.
         
         consumer1.addCash(10.00);
-        System.out.println("Consumer 1 found Cash on Hand: " + consumer1.getFoundCash());
+        System.out.println("Consumer 1 found Cash on Hand: " + consumer1.getCash());
         System.out.println();
 
         // Question 5
