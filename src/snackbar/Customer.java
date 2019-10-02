@@ -3,6 +3,7 @@ package snackbar;
 public class Customer {
     private static int maxId = 0;
     private int id;
+    
     private String name;
     private double cash;
 
@@ -29,8 +30,8 @@ public class Customer {
         this.cash = this.cash + cash;
     }
 
-    public void buyMorsel(double cash) {
+    public void purchaseSnack(double cash) {
         this.cash = this.cash - cash;
     }
-    
+
 }
